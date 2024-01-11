@@ -19,6 +19,10 @@ else
   curl -L http://install.ohmyz.sh | sh
 fi
 
+rm $HOME/.zshrc
+ln -s "/Users/zuzana/.zshrc" "$HOME/.zshrc"
+source $HOME/.zshrc
+
 # Set default MySQL root password and auth type.
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
